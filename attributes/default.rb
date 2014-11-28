@@ -8,7 +8,7 @@ default[:sidekiq] = [{
   # unless a utility name is set, in which case, Sidekiq will
   # only be installed on to a utility instance that matches
   # the name
-  :utility_name => 'app',
+  :utility_name => 'sidekiq',
 
   # Number of workers (not threads)
   :workers => 1,
@@ -26,9 +26,9 @@ default[:sidekiq] = [{
   :verbose => false
 },
 {
-  :utility_name => 'app',
+  :utility_name => 'sidekiq',
   :workers => 1,
-  :concurrency => 25,
+  :concurrency => 5,
 
   :queues => {
     :default => 1
